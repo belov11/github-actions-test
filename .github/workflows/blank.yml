@@ -14,15 +14,16 @@ jobs:
 
     steps:
       - name: Git clone my repo
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
+      - shell: bash
 
       - name: List current folder
         run: ls -la
 
       - name: Check current directiory
         run: |
-          git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/apache_script.sh
-          git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/nginx_script.sh
+          #git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/apache_script.sh
+          #git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/nginx_script.sh
           cd ~
           cp /home/runner/work/github-actions-test/github-actions-test/apache_script.sh /home/runner/apache_script.sh
           cp /home/runner/work/github-actions-test/github-actions-test/nginx_script.sh /home/runner/nginx_script.sh
@@ -31,7 +32,7 @@ jobs:
           #git update-index --chmod=+x ./home/runner/apache_script.sh
           #git update-index --chmod=+x ./home/runner/nginx_script.sh
           ls -ls
-          pwd
+          #pwd
           ./apache_script.sh
           #./nginx_script.sh
-          ls -ls
+          #ls -ls
