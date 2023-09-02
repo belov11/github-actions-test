@@ -21,13 +21,15 @@ jobs:
 
       - name: Check current directiory
         run: |
+          git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/apache_script.sh
+          git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/nginx_script.sh
           cd ~
           cp /home/runner/work/github-actions-test/github-actions-test/apache_script.sh /home/runner/apache_script.sh
           cp /home/runner/work/github-actions-test/github-actions-test/nginx_script.sh /home/runner/nginx_script.sh
-          sudo chmod 777 apache_script.sh
-          sudo chmod 777 nginx_script.sh
-          git update-index --chmod=+x ./home/runner/apache_script.sh
-          git update-index --chmod=+x ./home/runner/nginx_script.sh
+          #sudo chmod 777 apache_script.sh
+          #sudo chmod 777 nginx_script.sh
+          #git update-index --chmod=+x ./home/runner/apache_script.sh
+          #git update-index --chmod=+x ./home/runner/nginx_script.sh
           ls -ls
           pwd
           ./apache_script.sh
