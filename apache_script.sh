@@ -1,8 +1,7 @@
 #!/bin/bash
-
 hosts=(site1.com site2.com site3.com)
 #apache_path="/etc/apache2/sites-available/"
-apache_path="/home/runner/"
+apache_path="/home/pavel/"
 result=0
 
 for (( i = 0; i < "${#hosts[*]}"; i++ )); do
@@ -30,7 +29,7 @@ EOF
       touch "${apache_path}${hosts[i]}.conf"
       echo "$info_apache" > "${apache_path}${hosts[i]}.conf"
       result=0
-    fi
+    fi 
   if diff -b -w -B <(echo "$info_apache") "${apache_path}${hosts[i]}.conf" >/dev/null; then
     echo "file equal"
   else

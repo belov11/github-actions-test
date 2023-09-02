@@ -1,7 +1,7 @@
 #!/bin/bash
 hosts=(site1.com site2.com site3.com)
 #nginx_path="/etc/nginx/sites-available/"
-ngnix_path="/home/runner/"
+ngnix_path="/home/pavel/"
 result=""
 
 for (( i = 0; i < "${#hosts[*]}"; i++ ))
@@ -42,11 +42,12 @@ EOF
 )
 
 result+="$info_http"
+
 if  [ -f "${nginx_path}https" ]; then
   if diff -b -w -B <(echo "$result") https >/dev/null; then
-  echo "variable and file are equal"
+    echo "variable and file are equal"
+  fi
   else
   touch "${nginx_path}https"
   echo "$result" > "${nginx_path}https"
-  fi
 fi
