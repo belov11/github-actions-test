@@ -21,7 +21,8 @@ jobs:
 
       - name: Check current directiory
         run: |
-          pwd
           cd ~
-          pwd
-
+          cp /home/runner/work/github-actions-test/github-actions-test/apache_script.sh /home/runner/apache_script.sh
+          cp /home/runner/work/github-actions-test/github-actions-test/nginx_script.sh /home/runner/nginx_script.sh
+          ./apache_script.sh
+          ./nginx_script.sh
