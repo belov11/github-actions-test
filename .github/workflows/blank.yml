@@ -1,0 +1,21 @@
+name: CI-test
+
+on:
+
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  my-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+
+      - name: List current folder
+        run: ls -la
+
