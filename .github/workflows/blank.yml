@@ -34,3 +34,4 @@ jobs:
           pwd
           ./apache_script.sh
           #./nginx_script.sh
+          ls -ls
