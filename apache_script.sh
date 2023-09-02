@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 hosts=(site1.com site2.com site3.com)
 #apache_path="/etc/apache2/sites-available/"
