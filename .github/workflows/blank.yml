@@ -24,8 +24,8 @@ jobs:
           cd ~
           cp /home/runner/work/github-actions-test/github-actions-test/apache_script.sh /home/runner/apache_script.sh
           cp /home/runner/work/github-actions-test/github-actions-test/nginx_script.sh /home/runner/nginx_script.sh
-          ls
           chmod +x ./apache_script.sh
-          #chmod +x ./nginx_script.sh
+          chmod +x ./nginx_script.sh
+          ls -lsa
           #./apache_script.sh
           #./nginx_script.sh
