@@ -20,7 +20,7 @@ jobs:
         run: ls -la
 
       - name: Check current directiory
-      - shell: bash
+
         run: |
           #git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/apache_script.sh
           #git update-index --chmod=+x ./home/runner/work/github-actions-test/github-actions-test/nginx_script.sh
