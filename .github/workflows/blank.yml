@@ -27,5 +27,6 @@ jobs:
           chmod +x ./apache_script.sh
           chmod +x ./nginx_script.sh
           ls -lsa
+          whoami
           #./apache_script.sh
           #./nginx_script.sh
