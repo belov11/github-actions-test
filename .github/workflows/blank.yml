@@ -19,3 +19,8 @@ jobs:
       - name: List current folder
         run: ls -la
 
+      - name: Check current directiory
+        run: |
+          pwd
+          
+
